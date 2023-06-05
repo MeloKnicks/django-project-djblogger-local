@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from taggit.managers import TaggableManager
+
 
 class Post(models.Model):
     options = (
@@ -30,6 +32,7 @@ class Post(models.Model):
         choices=options,
         default="draft",
     )
+    tags = TaggableManager()
 
     class Meta:
         ordering = ("-created_at",)

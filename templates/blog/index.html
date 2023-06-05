@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Index Page
+{% endblock title %}
+
+{% block content %}
+    <!-- Navbar -->
+    {% include 'base/navbar.html' %}
+
+    <!-- Components -->
+    {% include 'blog/components/splash.html' %}
+
+    <!-- Content -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <!-- Include Post lists -->
+                {% include 'blog/components/post-list-elements.html' %}
+            </div>
+            <div class="d-none d-lg-block col-4">
+                <!-- Include Tags -->
+                {% sidebar_tag_cloud %}
+                {% include 'base/footer.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% load django_htmx %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap5 CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Homepage{% endblock title %}</title>
+</head>
+<body>
+
+<!-- Block Content -->
+{% block content %}
+{% endblock content %}
+
+<!-- Bootstrap5 JS -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/htmx.min.js' %}"></script>
+
+</body>
+</html>
