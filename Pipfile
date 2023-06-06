@@ -13,6 +13,7 @@ factory-boy = "*"
 pytest-factoryboy = "*"
 django-htmx = "*"
 django-taggit = "*"
+markdown = "*"
 
 [dev-packages]
 

@@ -75,6 +75,7 @@ TEMPLATES = [
             "builtins": [
                 # custom template tag (inclusion_tag)
                 "blog.templatetags.tag_cloud",
+                "blog.templatetags.markdown_processing",
             ],
         },
     },
