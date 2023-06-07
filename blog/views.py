@@ -26,3 +26,23 @@ def post_single(request, post):
             "related": related,
         },
     )
+
+
+class TagListView(ListView):
+    model = Post
+    paginate_by = 10
+    context_object_name = "tags"
+
+    def get_queryset(self):
+        return Post.objects.filter(tags__slug__in=[self.kwargs["tag"]])
+
+    def get_template_names(self):
+        if self.request.htmx:
+            return "blog/components/post-list-elements-tags.html"
+        return "blog/tags.html"
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["tag"] = self.kwargs["tag"]
+
+        return context

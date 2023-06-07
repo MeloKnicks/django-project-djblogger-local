@@ -40,16 +40,16 @@ class PostFactory(factory.django.DjangoModelFactory):
             self.tags.add(extracted)
         else:
             self.tags.add(
-                "Python",
-                "Django",
-                "Databases",
-                "Pytest",
-                "Javascript",
-                "VSCode",
-                "Pycharm",
-                "Deployment",
-                "Full-Stack",
-                "ORM",
-                "Front-End",
-                "Back-End",
+                "python",
+                "django",
+                "databases",
+                "pytest",
+                "javascript",
+                "vscode",
+                "pycharm",
+                "deployment",
+                "full-stack",
+                "orm",
+                "front-end",
+                "back-end",
             )
